@@ -12,13 +12,13 @@ app.use(express.static('public'));
 
 app.get('/notes', (req,res) => {
 console.log('get /note reuest received');
-res.sendFile(path.join(__dirname,'/public/notes.html'))});
+res.sendFile(path.join(__dirname,'/notes.html'))});
 
 
 app.get('*', (req, res) => {
     console.log('get * resquest receiced');
-    res.sendFile(path.join(__dirname, '/public/index.html'))})
+    res.sendFile(path.join(__dirname, '/index.html'))})
 
 
 
-app.listen(PORT, () => console.log(`App listening at http://localhost:${PORT} 🚀`));
+app.listen(PORT, () => console.log(`App listening at ${PORT} 🚀`));
