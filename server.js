@@ -12,7 +12,7 @@ app.use(express.static('public'));
 
 app.get('/notes', (req,res) => {
 console.log('get /note reuest received');
-res.sendFile(path.join(__dirname,'/notes.html'))});
+res.sendFile(path.join(__dirname,'/public/notes.html'))});
 
 
 app.get('*', (req, res) => {
